@@ -24,9 +24,6 @@ const Header = () => {
           <Link className="font-thin mr-8  hover:text-yellow-600" to="/">
             Home
           </Link>
-          <Link className="font-thin mr-8  hover:text-yellow-600" to="/booking">
-            Booking
-          </Link>
           <Link className="font-thin mr-8  hover:text-yellow-600" to="/contact">
             Contact
           </Link>

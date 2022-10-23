@@ -20,28 +20,24 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/hotels`),
+        loader: () => fetch(`https://travel-bee-server.vercel.app/hotels`),
       },
       {
         path: "hotels/:id",
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/hotels/${params.id}`);
+          return fetch(`https://travel-bee-server.vercel.app/hotels/${params.id}`);
         },
         element: <Location></Location>,
       },
       {
-        path: "booking",
+        path: "booking/:id",
         element: (
           <PrivetRoute>
             <Booking></Booking>
           </PrivetRoute>
         ),
-      },
-      {
-        path: "booking/:id",
-        element: <Booking></Booking>,
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/hotels/${params.id}`);
+          return fetch(`https://travel-bee-server.vercel.app/hotels/${params.id}`);
         },
       },
       {

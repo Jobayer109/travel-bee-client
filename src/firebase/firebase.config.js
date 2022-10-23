@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCWpddQak9ap_JmqALPQQGeZgV7DBBkhmA",
-  authDomain: "travel-bee-auth.firebaseapp.com",
-  projectId: "travel-bee-auth",
-  storageBucket: "travel-bee-auth.appspot.com",
-  messagingSenderId: "152851582478",
-  appId: "1:152851582478:web:e62a1089e9553dae45f65f",
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 const app = initializeApp(firebaseConfig);

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LocationCard = ({ location, handleDetails }) => {
   const { img, spot, id } = location;
   return (
-    <div onClick={handleDetails} className="card w-60 h-72 bg-base-100 shadow-xl image-full ">
+    <div className="card w-60 h-72 bg-base-100 shadow-xl image-full border-1 border-green-300">
       <figure>
         <img src={img} alt="" />
       </figure>
@@ -12,7 +12,10 @@ const LocationCard = ({ location, handleDetails }) => {
         <h2 className="card-title mb-44 font-semibold text-2xl">{spot}</h2>
 
         <div className="card-actions mb-0">
-          <button className="btn btn-sm btn-outline btn-success w-40 mx-auto">
+          <button
+            onClick={handleDetails}
+            className="btn btn-sm btn-outline btn-success w-40 mx-auto"
+          >
             <span className="">
               <Link to={`/hotels/${id}`}>See Details</Link>
             </span>

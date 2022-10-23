@@ -4,7 +4,6 @@ import LocationCard from "./LocationCard";
 
 const Home = () => {
   const locations = useLoaderData()
-    console.log(locations);
     
 
     const handleDetails = () => {
@@ -20,12 +19,11 @@ const Home = () => {
         backgroundImage: `url("https://beautifulbangladesh.gov.bd/storage/backend/images/upload/thumbnil/nilgiri-2020-06-07-5edc99c426aa6.jpeg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        opacity: "1",
       }}
     >
       <div className="grid grid-cols-3  w-[60%] mx-auto">
         {locations.map((location) => (
-          <LocationCard location={location} handleDetails={handleDetails}></LocationCard>
+          <LocationCard key={location.id} location={location} handleDetails={handleDetails}></LocationCard>
         ))}
       </div>
     </div>

@@ -32,11 +32,13 @@ const Login = () => {
       });
   };
 
+
   const handleGoogleSignIn = () => {
     googleSignIn(googleProvider)
       .then((result) => {
+        navigate(from, {replace:true})
         console.log(result.user);
-      })
+      })  
       .catch((error) => {
         setError(error);
       });
